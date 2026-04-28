@@ -1,0 +1,177 @@
+# VCKG Configuration File
+
+# Data paths (configure via environment variable or edit this file)
+data:
+  # Set DATA_BASE_PATH environment variable or modify this path
+  # Default uses relative path to shared datasets
+  base_path: "${DATA_BASE_PATH:-../../../../shared/sc_knowledge/datasets}"
+  
+  # Data sources (paths relative to base_path, all follow data/ subdirectory structure)
+  sources:
+    # === Original databases ===
+    ncbi:
+      data_report: "ncbi/data/data_report.jsonl"
+      gene_info: "ncbi/data/Homo_sapiens.gene_info"
+      symbol_synonyms: "ncbi/data/Homo_sapiens.symbol_synonyms.tsv"
+    
+    biogrid:
+      interactions: "biogrid/data/BIOGRID-ALL-4.4.247.tab.txt"
+    
+    alliance:
+      genetic_interactions: "alliance_of_genome_resources/data/alliance_genetic_interactions_human.tsv"
+      molecular_interactions: "alliance_of_genome_resources/data/alliance_molecular_interactions_human.tsv"
+      disease: "alliance_of_genome_resources/data/DISEASE-ALLIANCE-JSON_HUMAN_7.json"
+      gene_description: "alliance_of_genome_resources/data/GENE-DESCRIPTION-JSON_HUMAN_9.json"
+    
+    cell_ontology:
+      cl_obo: "cell_ontology/data/cl.obo"
+    
+    cell_taxonomy:
+      resource: "cell_taxonomy/data/Cell_Taxonomy_resource.txt"
+    
+    cellphonedb:
+      gene_input: "cellphonedb/data/gene_input.csv"
+      interaction_input: "cellphonedb/data/interaction_input.csv"
+      protein_input: "cellphonedb/data/protein_input.csv"
+      transcription_factor: "cellphonedb/data/transcription_factor_input.csv"
+      complex_input: "cellphonedb/data/complex_input.csv"
+    
+    cz_cellxgene:
+      cellxgene: "cz_cellxgene/data/cz_cellxgene.json"
+    
+    gene_ontology:
+      go_obo: "gene_ontology/data/go-basic.obo"
+      go_json: "gene_ontology/data/go-basic.json"
+    
+    hgnc:
+      complete_set: "hgnc/data/hgnc_complete_set.json"
+      complete_set_tsv: "hgnc/data/hgnc_complete_set.tsv"
+    
+    pathbank:
+      metabolites: "pathbank/data/pathbank_all_metabolites.csv"
+      proteins: "pathbank/data/pathbank_all_proteins.csv"
+      pathways: "pathbank/data/pathbank_pathways.csv"
+    
+    string:
+      interactions: "string/data/9606.protein.links.full.v12.0.txt"
+      links_detailed: "string/data/9606.protein.links.detailed.v12.0.txt"
+      aliases: "string/data/9606.protein.aliases.v12.0.txt"
+      info: "string/data/9606.protein.info.v12.0.txt"
+    
+    human_protein_atlas:
+      proteinatlas: "the_human_protein_atlas/data/proteinatlas.json"
+      proteinatlas_tsv: "the_human_protein_atlas/data/proteinatlas.tsv"
+    
+    uniprot:
+      human: "uniprot/data/uniprot_human.json"
+    
+    wiki:
+      gene_cell_knowledge: "wiki/data/gene_cell_knowledge.csv"
+    
+    cell_marker:
+      human: "cell_marker/data/Cell_marker_Human.csv"
+    
+    reactome:
+      interactions: "reactome/data/reactome.homo_sapiens.interactions.tab-delimited.txt"
+      ensembl2reactome: "reactome/data/Ensembl2Reactome_human.txt"
+      uniprot2reactome: "reactome/data/UniProt2Reactome_human.txt"
+      ncbi2reactome: "reactome/data/NCBI2Reactome_human.txt"
+      pathways: "reactome/data/ReactomePathways_human.txt"
+      pathways_relation: "reactome/data/ReactomePathwaysRelation_human.txt"
+    
+    # === Additional databases ===
+    kegg:
+      pathway_list: "kegg/data/pathway_list_hsa.txt"
+      gene_list: "kegg/data/gene_list_hsa.txt"
+      disease_list: "kegg/data/disease_list.txt"
+      compound_list: "kegg/data/compound_list.txt"
+      pathway_gene_link: "kegg/data/pathway_gene_link_hsa.txt"
+      disease_gene_link: "kegg/data/disease_gene_link_hsa.txt"
+      module_gene_link: "kegg/data/module_gene_link_hsa.txt"
+    
+    disease_ontology:
+      obo: "disease_ontology/data/doid.obo"
+      json: "disease_ontology/data/doid.json"
+    
+    mondo:
+      obo: "mondo/data/mondo.obo"
+      json: "mondo/data/mondo.json"
+    
+    hpo:
+      obo: "hpo/data/hp.obo"
+      genes_to_phenotype: "hpo/data/genes_to_phenotype.txt"
+      phenotype_annotations: "hpo/data/phenotype_annotations.txt"
+    
+    uberon:
+      obo: "uberon/data/uberon.obo"
+    
+    relation_ontology:
+      obo: "relation_ontology/data/ro.obo"
+    
+    trrust:
+      human: "trrust/data/trrust_rawdata.human.tsv"
+    
+    jaspar:
+      pfm: "jaspar/data/JASPAR2024_CORE_vertebrates_non-redundant_pfms_jaspar.txt"
+      human_tfs: "jaspar/data/human_tf_info.tsv"
+    
+    chea3:
+      chea_2022: "chea3/data/ChEA_2022.gmt"
+      encode_tf: "chea3/data/ENCODE_TF_ChIP-seq_2015.gmt"
+      archs4_coexp: "chea3/data/ARCHS4_TFs_Coexp.gmt"
+    
+    msigdb:
+      hallmark: "msigdb/data/h.all.v2024.1.Hs.symbols.gmt"
+      c2_cp: "msigdb/data/c2.cp.v2024.1.Hs.symbols.gmt"
+      c3_tft: "msigdb/data/c3.tft.v2024.1.Hs.symbols.gmt"
+      c5_go_bp: "msigdb/data/c5.go.bp.v2024.1.Hs.symbols.gmt"
+      c5_go_mf: "msigdb/data/c5.go.mf.v2024.1.Hs.symbols.gmt"
+      c5_go_cc: "msigdb/data/c5.go.cc.v2024.1.Hs.symbols.gmt"
+      c8_cell_type: "msigdb/data/c8.all.v2024.1.Hs.symbols.gmt"
+    
+    ctd:
+      chem_gene: "ctd/data/CTD_chem_gene_ixns.tsv"
+      chemicals_diseases: "ctd/data/CTD_chemicals_diseases.tsv"
+      genes_diseases: "ctd/data/CTD_genes_diseases.tsv"
+      genes_pathways: "ctd/data/CTD_genes_pathways.tsv"
+    
+    dgidb:
+      interactions: "dgidb/data/interactions.tsv"
+      genes: "dgidb/data/genes.tsv"
+      drugs: "dgidb/data/drugs.tsv"
+    
+    omnipath:
+      interactions: "omnipath/data/interactions.tsv"
+      tf_target: "omnipath/data/tf_target.tsv"
+      ligand_receptor: "omnipath/data/ligand_receptor.tsv"
+      pathway_annotations: "omnipath/data/pathway_annotations.tsv"
+    
+    ensembl:
+      human_genes: "ensembl/data/human_genes.tsv"
+    
+    gencode:
+      annotation: "gencode/data/gencode.v47.annotation.gtf.gz"
+
+# Output paths (relative to project root)
+output:
+  base_path: "./output"
+  nodes_dir: "nodes"
+  edges_dir: "edges"
+
+# Neo4j configuration
+neo4j:
+  uri: "bolt://localhost:7687"
+  user: "neo4j"
+  password: "vckg_password_123"
+  database: "neo4j"
+
+# Species filter
+species:
+  taxid: 9606  # Homo sapiens
+  name: "Homo sapiens"
+
+# Processing options
+processing:
+  batch_size: 10000
+  log_level: "INFO"
+

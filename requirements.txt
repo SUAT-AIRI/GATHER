@@ -1,0 +1,43 @@
+# VCKG-RAG - Virtual Cell Knowledge Graph for Retrieval-Augmented Generation
+# Requirements for SIGIR 2026 submission
+
+# Data processing
+pandas>=2.0.0
+numpy>=1.24.0
+openpyxl>=3.1.0  # For Excel file reading
+
+# OBO file parsing
+obonet>=1.0.0
+
+# Graph database
+neo4j>=5.0.0
+
+# Configuration
+pyyaml>=6.0.0
+
+# Progress bar
+tqdm>=4.65.0
+
+# Logging
+loguru>=0.7.0
+
+# JSON handling
+orjson>=3.9.0
+
+# Utilities
+python-dotenv>=1.0.0
+
+# LLM API
+openai>=1.0.0
+httpx>=0.25.0  # Async HTTP client
+
+# Visualization
+matplotlib>=3.7.0
+
+# Ontology parsing (for cell type annotation)
+pronto>=2.5.0
+networkx>=3.0.0
+
+# HTTP requests (for database downloads)
+requests>=2.28.0
+
